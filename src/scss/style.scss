@@ -1,0 +1,27 @@
+//  ================== FONTS ================== //
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+//  ================== FONTS ================== //
+
+//  ================== IMPORTS ================== //
+@import 'nullstyle.scss';
+@import '_variables.scss';
+// @import 'page.scss';
+@import 'header.scss';
+//  ================== IMPORTS ================== //
+
+
+// =================== S
+body {
+    font-family: Montserrat;
+}
+
+// remove scrolling for all ._scroll-lock
+*._scroll-lock {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1130px;
+    margin: auto;
+    padding: 0 10px;
+}
