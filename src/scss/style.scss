@@ -5,14 +5,14 @@
 //  ================== IMPORTS ================== //
 @import 'nullstyle.scss';
 @import '_variables.scss';
-// @import 'page.scss';
 @import 'header.scss';
+@import 'main_screen';
 //  ================== IMPORTS ================== //
 
-
-// =================== S
+// =================== STYLES =================== //
 body {
     font-family: Montserrat;
+    overflow-x: hidden;
 }
 
 // remove scrolling for all ._scroll-lock
@@ -25,3 +25,21 @@ body {
     margin: auto;
     padding: 0 10px;
 }
+
+.full_screen {
+    width: 100vw;
+    height: 100vh;
+    background: #F9F6F1;
+}
+
+.btn {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background: #D7B399;
+    padding: 18px 35px;
+    border: none;
+}
+
+.btn-2 {}
