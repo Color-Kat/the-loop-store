@@ -3,7 +3,7 @@
  */
 export default function () {
     let iconMenu = document.querySelector('.menu__icon');
-    let bodyMenu = document.querySelector('.menu__body');
+    let bodyMenu = document.querySelector('.header__mobile-menu');
 
     if (iconMenu && bodyMenu) {
         // lock scroll body
