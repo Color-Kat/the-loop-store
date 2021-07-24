@@ -284,6 +284,12 @@
 
             // ----- sub-menu list ----- //
 
+            /* if li is active we need to show sub-menu as relative */
+            @media (max-width: $header_show_menu_icon_break_point) {
+                &>li._active .menu__sub-list {
+                    position: relative;
+                }
+            }
         }
 
         .header__menu_1 {
@@ -305,50 +311,59 @@
                     margin: 0 0 0 100px;
 
                     // cart
-
                     @media (max-width: 1180px) {
                         margin: 0 0 0 30px !important;
-                    }
-
-                    .menu__link {
-                        width: 91px;
-                        display: flex;
-                        justify-content: space-between;
-
-                        .cart__icon {
-                            width: 30px;
-                            height: 30px;
-                            align-self: center;
-                        }
-
-                        .cart__count {
-                            position: relative;
-                            width: 33px;
-                            height: 15px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            align-self: center;
-
-                            color: white;
-                            background: #D7B399;
-
-                            &:before {
-                                position: absolute;
-                                content: "";
-                                width: 0;
-                                height: 0;
-                                border-top: 7.5px solid transparent;
-                                border-bottom: 7.5px solid transparent;
-                                border-right: 15px solid #D7B399;
-                                left: -15px;
-                            }
-                        }
-
                     }
                 }
             }
         }
+
+        // ===== cart for mobile ===== //
+        .mobile_cart {
+            display: none !important;
+
+            @media(max-width: $header_show_menu_icon_break_point) {
+                display: flex !important;
+            }
+        }
+
+        .cart_link {
+            width: 91px;
+            display: flex;
+            justify-content: space-between;
+
+            .cart__icon {
+                width: 30px;
+                height: 30px;
+                align-self: center;
+            }
+
+            .cart__count {
+                position: relative;
+                width: 33px;
+                height: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+
+                color: white;
+                background: #D7B399;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-top: 7.5px solid transparent;
+                    border-bottom: 7.5px solid transparent;
+                    border-right: 15px solid #D7B399;
+                    left: -15px;
+                }
+            }
+        }
+
+        // ===== cart for mobile ===== //
 
         // ===== MOBILE MENU ===== //
         .header__mobile-menu {
@@ -373,22 +388,17 @@
                     color: #fff !important;
                 }
 
-
-                // create pseudo header
-                // &:before {
-                //     content: "";
-                //     position: fixed;
-                //     top: 0;
-                //     left: 0;
-                //     width: 100%;
-                //     height: $header_height;
-                //     background: $header_bg;
-                //     z-index: 110;
-                // }
+                .menu__list {
+                    margin-bottom: 38px;
+                }
 
                 // show mobile menu if ._active
                 &._active {
                     top: 0;
+                }
+
+                .cart {
+                    display: none;
                 }
             }
         }
@@ -411,11 +421,4 @@ body._pc .menu__list>li.menu__sub-list-hover:hover .menu__sub-list {
 
 body._touch .menu__link {
     flex: 1 1 auto;
-}
-
-/* if li is active we need to show sub-menu as relative */
-@media (max-width: $header_show_menu_icon_break_point) {
-    body._touch .menu__list>li._active .menu__sub-list {
-        position: relative;
-    }
 }

@@ -11,7 +11,7 @@ export default function () {
             elem, // save element to manipulate it
             // get data from data-attribute (move-to, break point)
             ...elem.getAttribute('data-move-to').split(' '),
-            elem // save start position to return element back
+            elem.parentElement // save start position to return element back
         ]);
     });
 
@@ -21,10 +21,10 @@ export default function () {
             // check do we need to move them
             if (window.innerWidth <= elem[2]) {
                 // move element in elemnt from data-move-to
-                document.querySelector(elem[1]).append(...elem[0].children);
+                document.querySelector(elem[1]).appendChild(elem[0]);
             } else {
                 // move back
-                if (elem[3]) elem[3].append(...elem[0].children); // move element to start position
+                if (elem[3]) elem[3].appendChild(elem[0]); // move element to start position
             }
         });
     }
