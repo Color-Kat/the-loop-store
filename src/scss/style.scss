@@ -8,6 +8,8 @@
 @import 'header.scss';
 @import 'main_screen';
 @import 'sections/collections.scss';
+@import 'sections/catalog.scss';
+@import 'sections/category.scss';
 //  ================== IMPORTS ================== //
 
 // =================== STYLES =================== //
@@ -23,6 +25,7 @@ body {
 
 .container {
     max-width: $container_width;
+    max-width: 1130px;
     margin: auto;
     padding: 0 10px;
 

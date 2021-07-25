@@ -1,0 +1,49 @@
+.section-catalog {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &__item {
+        position: relative;
+
+        // chess board
+        &:nth-child(2n),
+        &:nth-child(n+5) {
+            background: #F9F6F1;
+        }
+
+        &,
+        &:nth-child(2n+6),
+        &:nth-child(n+8) {
+            background: #F4F4F4;
+        }
+
+        &:nth-child(2n+10),
+        &:nth-child(n+12) {
+            background: #F9F6F1;
+        }
+
+        &:nth-child(2n+14) {
+            background: #F4F4F4;
+        }
+
+        .section-catalog__title {
+            font-weight: 300;
+            font-size: 21px;
+            line-height: 26px;
+            letter-spacing: 0.03em;
+            z-index: 10;
+
+            margin: 0;
+            position: absolute;
+            left: 30px;
+            bottom: 24px;
+        }
+
+        .section-catalog__img {
+            z-index: 9;
+            max-width: 277px;
+            top: 100%;
+            left: 100%;
+        }
+    }
+}

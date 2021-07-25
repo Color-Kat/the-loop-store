@@ -1,0 +1,97 @@
+.section-category {
+    text-align: center;
+    margin: 150px auto !important;
+
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
+        /* identical to box height */
+
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 100px 0;
+
+        .section-category__item {
+            position: relative;
+            // width: 25%;
+            border: 3px solid #D7B399;
+            z-index: 2;
+            margin-bottom: 30px;
+            padding: 25px;
+            width: 255px;
+            height: 350px;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            * {
+                position: relative;
+                z-index: 2;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                background: #fff;
+            }
+
+            &::before {
+                top: -0.3em;
+                bottom: -0.3em;
+                left: 1em;
+                right: 1em;
+            }
+
+            &::after {
+                left: -0.3em;
+                right: -0.3em;
+                top: 1em;
+                bottom: 1em;
+            }
+
+            &:hover .category__item__img {
+                transform: rotateY(180deg);
+            }
+
+            .category__item__img {
+                margin: 0 auto;
+                transition: transform .7s ease;
+                max-width: 100%;
+            }
+
+            .category__item__title {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            .category__item__price {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 22px;
+
+                /* Accent */
+
+                color: #D7B399;
+            }
+        }
+    }
+
+    &__btn {
+        &:hover {}
+
+        &:active {}
+
+        &:focus {}
+    }
+}
