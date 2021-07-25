@@ -1,5 +1,5 @@
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -13,8 +13,8 @@
 
         min-height: $header_height;
 
-        @media (max-width: $header_show_menu_icon_break_point) {
-            padding: 0 20px !important;
+        @media (max-width: $md) {
+            min-height: 80px !important;
         }
 
         // ===== LOGO ===== //
@@ -379,8 +379,17 @@
                 padding: 60px 45px 45px 30px;
                 overflow: auto;
 
+                @media (max-width: $md) {
+                    margin-top: 90px !important;
+                }
+
                 transition: all .3s ease;
-                transition-property: left, top, right, bottom, opacity, transform;
+                transition-property: left,
+                top,
+                right,
+                bottom,
+                opacity,
+                transform;
 
                 background: rgba(0, 0, 0, 0.8); // color for bg mobile menu
 

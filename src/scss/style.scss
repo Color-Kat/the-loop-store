@@ -7,6 +7,7 @@
 @import '_variables.scss';
 @import 'header.scss';
 @import 'main_screen';
+@import 'sections/collections.scss';
 //  ================== IMPORTS ================== //
 
 // =================== STYLES =================== //
@@ -21,9 +22,13 @@ body {
 }
 
 .container {
-    max-width: 1130px;
+    max-width: $container_width;
     margin: auto;
     padding: 0 10px;
+
+    @media (max-width: $header_show_menu_icon_break_point) {
+        padding: 0 20px;
+    }
 }
 
 .full_screen {
@@ -43,3 +48,8 @@ body {
 }
 
 .btn-2 {}
+
+.main__section {
+    position: relative;
+    width: 100%;
+}

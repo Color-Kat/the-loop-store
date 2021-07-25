@@ -4,21 +4,79 @@
     .full_screen {
         $last-line-height: 235px;
 
+        .full_screen-container {
+            width: 100%;
+            height: 100%;
+            padding-bottom: $last-line-height;
+        }
+
         .swiper-container {
             position: relative;
             width: 100%;
             height: 100%;
-            padding: 0 0 $last-line-height 0;
 
             .swiper-wrapper {
+                @media (max-width: $md) {
+                    .swiper-slide {
+                        align-content: center;
+                    }
+                }
+
                 .swiper-slide {
                     display: flex;
                     align-items: center;
+
+                    @media (max-width: $md) {
+                        flex-wrap: wrap;
+
+                        .slider__column {
+                            width: 100% !important;
+                            height: max-content;
+
+                            &.introducing {
+                                order: 2
+                            }
+
+                            &.slider__column_img {
+                                display: flex;
+                                justify-content: center;
+                            }
+                        }
+                    }
 
                     .slider__column {
                         position: relative;
                         width: 50%;
                         max-height: 377px;
+
+                        @media (max-width: 900px) {
+                            .slider__over-title {
+                                font-size: 24px !important;
+                            }
+
+                            .slider__title {
+                                font-size: 44px !important;
+                                margin: 15px 0 30px !important;
+                            }
+                        }
+
+                        @media (max-width: $md) {
+                            text-align: center;
+                        }
+
+
+                        @media (max-width: $sm) {
+                            .slider__over-title {
+                                font-size: 16px !important;
+                                line-height: 24px !important;
+                            }
+
+                            .slider__title {
+                                font-size: 34px !important;
+                                line-height: 40px !important;
+                                margin: 10px 0 20px !important;
+                            }
+                        }
 
                         .slider__over-title {
                             font-weight: 400;
@@ -47,6 +105,14 @@
                             display: flex;
                             flex-wrap: wrap;
                             margin-top: 40px;
+
+                            @media (max-width: 900px) {
+                                margin-top: -20px;
+                            }
+
+                            @media (max-width: $md) {
+                                margin-top: 0;
+                            }
 
                             * {
                                 width: 100%;
@@ -80,6 +146,10 @@
 
                         img {
                             height: 100%;
+
+                            @media (max-width: $md) {
+                                height: 200px;
+                            }
                         }
                     }
                 }
@@ -119,6 +189,20 @@
                     color: white;
                 }
 
+                @media (max-width: $md) {
+                    padding: 0 20px;
+
+                    .last-line-title {
+                        font-size: 22px !important;
+                        line-height: 27px !important;
+                    }
+
+                    .last-line-text {
+                        font-size: 17px !important;
+                        line-height: 22px;
+                    }
+                }
+
                 .last-line-title {
                     font-size: 30px;
                     font-weight: 400;
@@ -138,5 +222,3 @@
         }
     }
 }
-
-.main__content {}
