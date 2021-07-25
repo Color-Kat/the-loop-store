@@ -88,10 +88,22 @@
     }
 
     &__btn {
+        position: relative;
+        padding: 18px 55px 18px 35px !important;
+        width: 220px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 35px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url('../../assets/icons/arrow_right.svg');
+            width: 20px;
+            height: 8px;
+            color: white;
+        }
+
         &:hover {}
-
-        &:active {}
-
-        &:focus {}
     }
 }
