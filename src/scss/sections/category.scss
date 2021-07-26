@@ -20,6 +20,7 @@
 
         .section-category__item {
             position: relative;
+            cursor: pointer;
             // width: 25%;
             border: 3px solid #D7B399;
             z-index: 2;
@@ -73,6 +74,10 @@
                 font-weight: 600;
                 font-size: 14px;
                 line-height: 17px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
 
             .category__item__price {
