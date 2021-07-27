@@ -13,21 +13,18 @@
         align-items: center;
         justify-content: space-between;
 
-        // flex-wrap: wrap;
-        @media (max-width: 1170px) {
+        @media (max-width: 1000px) {
             padding: 77px 0 !important;
             flex-direction: column;
         }
 
         .footer__main {
-            min-width: 200px;
+            max-width: 200px;
             position: relative;
+            margin-right: auto;
 
-            // max-width: 200px;
-            @media (max-width: 1170px) {
-                // display: flex;
-                // justify-content: center;
-                // flex-wrap: wrap;
+            @media (max-width: 1000px) {
+                margin: 0 auto;
 
                 .footer__logo {
                     width: max-content;
@@ -63,6 +60,7 @@
             }
 
             .footer__description {
+                max-width: 100%;
                 font-size: 14px;
                 line-height: 22px;
                 color: #FFFFFF;
@@ -71,21 +69,30 @@
 
         .footer__columns {
             display: flex;
-            justify-content: space-around;
-            margin: 0 auto;
+            justify-content: space-between;
+            box-sizing: content-box;
 
-            @media (max-width: 1170px) {
+            @media (max-width: 1000px) {
                 flex-direction: column;
+                max-width: 100%;
+                margin: 0 auto;
             }
 
             .footer__collumn {
                 position: relative;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: flex-start;
+                flex-direction: column;
+                white-space: nowrap;
+                margin: 0 42px;
 
-                * {
-                    width: 100%;
+                @media (max-width: 1000px) {
+                    min-width: 200px;
+                    margin: 0;
+                }
+
+                &:last-child {
+                    margin: 0;
                 }
 
                 .footer__collumn_title {
@@ -94,6 +101,11 @@
                     line-height: 12px;
                     text-transform: uppercase;
                     color: #FFFFFF;
+
+                    @media (max-width: 1000px) {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
                 }
 
                 a {
@@ -102,6 +114,11 @@
                     color: #CBCFD4;
                     display: flex;
                     margin-bottom: 10px;
+
+                    @media (max-width: 1000px) {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
 
                     &:hover {
                         text-decoration: underline;

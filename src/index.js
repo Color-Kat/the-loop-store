@@ -21,7 +21,7 @@ Swiper.use([Pagination, Autoplay]);
 const swiper = new Swiper('.swiper-container', {
     // Optional parameters
     // direction: 'gorizontal',
-    loop: true,
+    // loop: true,
     autoplay: {
         delay: 5000,
     },
