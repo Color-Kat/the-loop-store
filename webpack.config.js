@@ -109,12 +109,7 @@ const plugins = () => {
             // }
         }),
         new CleanWebpackPlugin(),
-        // new CopyWebpackPlugin({
-        //     patterns: [{
-        //         from: path.resolve(__dirname, "src/favicon.ico"),
-        //         to: path.resolve(__dirname, "dist")
-        //     }]
-        // }),
+
         new MiniCssExtractPlugin({
             filename: filename("css")
         })
@@ -122,6 +117,12 @@ const plugins = () => {
 
     if (!isDev) {
         base.push(new BundleAnalyzerPlugin());
+        base.push(new CopyWebpackPlugin({
+            patterns: [{
+                from: path.resolve(__dirname, "assets"),
+                to: path.resolve(__dirname, "dist/assets")
+            }]
+        }), )
     }
 
     return base;
