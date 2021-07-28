@@ -4,10 +4,19 @@
     .full_screen {
         $last-line-height: 235px;
 
+        @media (max-height: 800px) {
+            height: max-content !important;
+        }
+
         .full_screen-container {
             width: 100%;
             height: 100%;
             padding-bottom: $last-line-height;
+
+            @media (max-height: 800px) {
+                height: 100vh;
+                padding-bottom: 0;
+            }
         }
 
         .swiper-container {
@@ -63,7 +72,6 @@
                         @media (max-width: $md) {
                             text-align: center;
                         }
-
 
                         @media (max-width: $sm) {
                             .slider__over-title {
@@ -182,6 +190,10 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+
+            @media (max-height: 800px) {
+                position: relative;
+            }
 
             .last-line-wrapper {
                 * {
